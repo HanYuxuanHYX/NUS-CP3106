@@ -2,7 +2,7 @@
 <b>AY 2019/2020 Semester II</b>.  
 <b>By Yuxuan</b>.  
 See report [here](NUS_CP3106_REPORT_YUXUAN.pdf).  
-See Video demo [here](https://youtu.be/JyBTJMctJJ0).  
+See video demo [here](https://youtu.be/JyBTJMctJJ0).  
 
 ## Disclaimer
 This work is an extension on Nguyen, Khanh, et al. “Vision-Based Navigation With Language-Based Assistance via Imitation Learning With Indirect Intervention.” <i>2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2019, doi:10.1109/cvpr.2019.01281. Github repo at https://github.com/debadeepta/vnla.
