@@ -15,7 +15,7 @@ This work is an extension on Nguyen, Khanh, et al. “Vision-Based Navigation Wi
 3) After you are done, copy our [VNLA](VNLA) folder in this repo and overwrite to the orginal repo. Also add [verbal_qa_vocab.txt](asknav/verbal_qa_vocab.txt) to the corresponding folder of original repo.
 ```
 $ cp -r VNLA root_dir/code/tasks/VNLA/
-$ cp verbal_qa_vocab.txt root_dir/data/asknav/.
+$ cp asknav/verbal_qa_vocab.txt root_dir/data/asknav/.
 ```
 4) Run experients at root_dir/code/tasks/VNLA/scripts/
 ```
