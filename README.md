@@ -2,17 +2,16 @@
 <b>AY 2019/2020 Semester II</b>.  
 <b>By Yuxuan</b>.  
 See report [here](NUS_CP3106_REPORT_YUXUAN.pdf).  
-Video demo:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JyBTJMctJJ0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+See Video demo [here](https://youtu.be/JyBTJMctJJ0).  
 
 ## Disclaimer
 This work is an extension on Nguyen, Khanh, et al. “Vision-Based Navigation With Language-Based Assistance via Imitation Learning With Indirect Intervention.” <i>2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2019, doi:10.1109/cvpr.2019.01281. Github repo at https://github.com/debadeepta/vnla.
 
 ## To re-run our experiment
-1) Clone the repo from the original work at <a href=https://github.com/debadeepta/vnla>here</a>  
+1) Clone the repo from the original work at [here](https://github.com/debadeepta/vnla).  
 2) Follow along the steps to:  
-  a) <a href=https://github.com/debadeepta/vnla/tree/master/data>download data</a>.  
-  b) <a href=https://github.com/debadeepta/vnla/tree/master/code>setup simulator</a>.  
+  a) [download data](https://github.com/debadeepta/vnla/tree/master/data).  
+  b) [setup simulator](https://github.com/debadeepta/vnla/tree/master/code).   
 3) After you are done, copy our [VNLA](VNLA) folder in this repo and overwrite to the orginal repo. Also add [verbal_qa_vocab.txt](asknav/verbal_qa_vocab.txt) to the corresponding folder of original repo.
 ```
 $ cp -r VNLA root_dir/code/tasks/VNLA/
