@@ -27,4 +27,4 @@ evaluation:
 $ bash eval_main_results.sh [learned|none] [seen|unseen]
 example: $ bash eval_main_results.sh learned seen
 ```
-Note that training parameters "random" and "first" in the original work are not implemented in our work, errors may be encountered. 
+   Note that training parameters "random" and "first" in the original work are not implemented in our work, errors may be encountered
