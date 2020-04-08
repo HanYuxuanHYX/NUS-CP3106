@@ -239,19 +239,13 @@ class AskOracle(object):  ####CHANGE HERE####
         scan = ob['scan']
         current_point = ob['viewpoint']
         # Find nearest goal to current point
-        _, goal_point = nav_oracle._find_nearest_point(scan, current_point, ob['goal_viewpoints'])
-
-        start_point = ob['init_viewpoint']
-        # Find closest point to the current point on the path from start point
-        # to goal point
-        d, _ = nav_oracle._find_nearest_point_on_a_path(scan, current_point,
-            start_point, goal_point)
+        d, goal_point = nav_oracle._find_nearest_point(scan, current_point, ob['goal_viewpoints'])
 
         panos_to_region = utils.load_panos_to_region(scan, None, include_region_id=False)
 
         # Rule (e): ask if the goal has been reached
         agent_decision = int(np.argmax(ob['nav_dist']))
-        if current_point == goal_point:
+        if current_point == goal_point or agent_decision == nav_oracle.agent_nav_actions.index('<end>'):
             return self.agent_ask_actions.index('arrive'), 'arrive'
 
         # Rule (a): ask if the agent deviates too far from the optimal path
@@ -417,8 +411,7 @@ class StepByStepSubgoalOracle(object):
             goal_region_ids.append(id)
             goal_region = region
 
-        _, goal_point = self.nav_oracle._find_nearest_point(scan, current_viewpoint, ob['goal_viewpoints'])
-        d, _ = self.nav_oracle._find_nearest_point_on_a_path(scan, current_viewpoint, start_viewpoint, goal_point)
+        d, goal_point = self.nav_oracle._find_nearest_point(scan, current_viewpoint, ob['goal_viewpoints'])
 
         actions_names = [self._make_action_name(action) for action in actions]
 
@@ -448,9 +441,9 @@ class StepByStepSubgoalOracle(object):
 
         # answer for 'is the goal far from me?'
         elif self.agent_ask_actions[q] == 'distance':
-            if d >= 8:
+            if d >= 10:
                 return 'far, ', 'prepend'
-            elif d >= 4:
+            elif d >= 5:
                 return 'middle, ', 'prepend'
             else:
                 return 'close, ', 'prepend'

@@ -192,7 +192,6 @@ def train(train_env, val_envs, agent, model, optimizer, start_iter, end_iter,
     start = time.time()
     sr = 'success_rate'
     
-    end_iter += 50000
     print(start_iter)
     print(end_iter)
     for idx in range(start_iter, end_iter, hparams.log_every):
