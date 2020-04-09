@@ -25,7 +25,7 @@
     "save_every"         : 1000,
     "log_every"          : 1000,
     "advisor"            : "verbal_qa",
-    "deviate_threshold"  : 8.0,
+    "deviate_threshold"  : 18.0,
     "uncertain_threshold": 0.9,
     "unmoved_threshold"  : 7,
     "same_room_threshold" : 7,
