@@ -16,7 +16,7 @@
     "reg_feedback"       : "teacher",
     "lr"                 : 1e-4,
     "weight_decay"       : 5e-4,
-    "n_iters"            : 200000,
+    "n_iters"            : 150000,
     "min_word_count"     : 1,
     "split_by_spaces"    : true,
     "start_lr_decay"     : 5000,

@@ -170,7 +170,7 @@ class ShortestPathOracle(object):
 
 
 
-class AskOracle(object):  ####CHANGE HERE####
+class AskOracle(object):  #### Change the asking teacher here ####
 
     def __init__(self, hparams, agent_ask_actions):
         self.deviate_threshold = hparams.deviate_threshold
@@ -396,7 +396,7 @@ class StepByStepSubgoalOracle(object):
             return ''
         return None
 
-    def _answer_question(self, actions, ob, q):
+    def _answer_question(self, actions, ob, q):  #### Change the agent's interpretation of the answers here ####
         scan = ob['scan']
         instr = ob['instruction']
         current_viewpoint = ob['viewpoint']
