@@ -24,7 +24,11 @@ $ bash train_main_results.sh [learned|none] [gpu id]
 example: $ bash train_main_results.sh learned 0
 
 evaluation:
-$ bash eval_main_results.sh [learned|none] [seen|unseen]
+$ bash eval_main_results.sh [learned|none] [seen|unseen] [gpu id]
 example: $ bash eval_main_results.sh learned seen
+
+no room experiment:
+$ bash train_noroom.sh noroom_learned [gpu id]
+$ bash eval_noroom.sh noroom_learned [seen|unseen]
 ```
-   Note that parameters "random" and "first" in the original work are not implemented in our work, errors may be encountered
+Note that baselines "random" and "first" in the original work are not implemented in our work, errors may be encountered. Rule ablation study is also not carried out.
